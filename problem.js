@@ -1,4 +1,5 @@
 function twon(a,b,c,d) {
+    var arr = [];
     if(a==c && b==d)
     {   
         arr=[]
@@ -6,14 +7,14 @@ function twon(a,b,c,d) {
         return arr;
     }
     if(a<c) {
-        var arr=twon(a+b,b,c,d)
+        arr=twon(a+b,b,c,d)
         if (arr){
             arr.push([a,b])
             return arr;
         }
     }
     if(b<d) {
-        var arr=twon(a,a+b,c,d)
+        arr=twon(a,a+b,c,d)
         if (arr){
             arr.push([a,b]);
             return arr;
