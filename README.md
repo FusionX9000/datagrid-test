@@ -1,4 +1,5 @@
 ## How to Run
-1. Launch problem.html in your browser.
-2. Enter the values for the arrays. 
-3. If an answer is possible, it'll print the steps. Otherwise, it'll print an error.
+1. Download/Clone repository.
+2. Launch problem.html from your browser.
+3. Enter the values for the arrays. 
+4. If an answer is possible, it'll print the steps. Otherwise, it'll print an error.
