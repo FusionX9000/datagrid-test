@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src=problem.js></script>
+    <script>
+    function oncl(){
+        var ans_elem=document.getElementsByName('ans')[0];
+        ans_elem.value="";
+        var a = parseInt(document.getElementsByName('a')[0].value);
+        var b = parseInt(document.getElementsByName('b')[0].value);
+        var c = parseInt(document.getElementsByName('c')[0].value);
+        var d = parseInt(document.getElementsByName('d')[0].value);
+        var arr = twon(a,b,c,d);
+        if (!arr) {
+            ans_elem.value="No answer found";
+            return;
+        }
+        ans_elem.setAttribute("rows",arr.length);
+        for(var i=arr.length-1;i>=0;i--)
+        {
+            console.log(arr[i])
+            ans_elem.value+=arr[i].toString()+"\n";
+        }
+
+    }
+    </script>
+    Array 1  
+    <p>
+    a: <input type="number" name="a" required>
+    b: <input type="number" name="b" required>
+    </p>
+    Array 2
+    <p>
+    c: <input type="number" name="c" required>
+    d: <input type="number" name="d" required>
+    </p>
+    Answer:
+    <p><textarea name="ans" readonly></textarea></p>
+    <input type="button" onclick="oncl()" value="Submit">
+</body>
+</html>
